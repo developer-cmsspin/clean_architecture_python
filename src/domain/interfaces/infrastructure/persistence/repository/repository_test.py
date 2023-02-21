@@ -6,7 +6,7 @@ import array as arr
 
 class RepositoryTest():
     @abstractclassmethod
-    def create_test(self, test: Test):
+    async def create_test(self, test: Test):
         pass
 
     @abstractclassmethod

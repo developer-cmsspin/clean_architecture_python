@@ -4,10 +4,10 @@
 # https://ellibrodepython.com/abstract-base-class
 
 from kink import di
-from infrastructure.external.test.access_service_infrastructure import AccessServiceInfrastructure
+from infrastructure.external.test.list_test_infrastructure import ListTestInfrastructure
 
-from domain.interfaces.infrastructure.external.test.i_access_service import IAccessService
+from domain.interfaces.infrastructure.external.test.i_list_test_infrastructure import ILisTestInfrastructure
 
 
 def add_infrastructure_external() -> None:
-    di[IAccessService] = AccessServiceInfrastructure()
+    di[ILisTestInfrastructure] = ListTestInfrastructure()

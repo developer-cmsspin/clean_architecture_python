@@ -5,3 +5,4 @@ from dataclasses import dataclass
 class TestDto():
     name: str
     code: int
+    enterprise: str

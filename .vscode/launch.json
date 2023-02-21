@@ -5,13 +5,21 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Python: Current File",
+      "name": "kafka - presentation",
       "type": "python",
       "request": "launch",
-      "program": "src/main.py",
+      "program": "src/presentation/api/app.py",
       "console": "integratedTerminal",
       "justMyCode": true,
-      "args": ["-B"]
+      "cwd": "${workspaceFolder}/src/presentation/service/main.py"
+    },
+    {
+      "name": "fast api - presentation",
+      "type": "python",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["presentation.api.main:app", "--reload"],
+      "cwd": "${workspaceFolder}/src"
     }
   ]
 }

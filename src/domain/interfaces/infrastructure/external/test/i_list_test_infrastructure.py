@@ -1,12 +1,13 @@
 from abc import ABCMeta, abstractclassmethod
 
 from kink import inject
-from domain.model.test import Test
+from domain.model.list_test import ListTest
+
 import array as arr
 
 
 @inject
-class IAccessService(metaclass=ABCMeta):
+class ILisTestInfrastructure(metaclass=ABCMeta):
     @abstractclassmethod
-    def execute(self, test: Test) -> Test:
+    async def execute(self) -> ListTest:
         pass

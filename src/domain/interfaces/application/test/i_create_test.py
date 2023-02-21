@@ -1,5 +1,5 @@
 from abc import ABCMeta, abstractclassmethod
-from domain.dto.testDto import TestDto
+from domain.dto.test_dto import TestDto
 
 
 class ICreateTest(metaclass=ABCMeta):

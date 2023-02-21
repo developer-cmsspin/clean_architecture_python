@@ -3,15 +3,14 @@ from infrastructure.external.dependency_injection import add_infrastructure_exte
 from application.dependency_injection import add_application
 import asyncio
 
-from presentation.common.program_console import ProgramConsole
+# from presentation.common.program_console import run_console
 
 add_infrastructure_external()
 add_application()
 
 
 if __name__ == '__main__':
-    console = ProgramConsole()
-    asyncio.run(console.run())
+    asyncio.run(run_console())
     # print(type(di[ICreateTest]))
     # create_test: ICreateTest = di[ICreateTest]
     # print(type(create_test))
