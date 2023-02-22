@@ -4,9 +4,9 @@ from domain.model.test import Test
 import array as arr
 
 
-class RepositoryTest():
+class IRepositoryTest():
     @abstractclassmethod
-    async def create_test(self, test: Test):
+    async def create_test(self, test: Test) -> Test:
         pass
 
     @abstractclassmethod

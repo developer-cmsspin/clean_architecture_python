@@ -12,11 +12,11 @@ from domain.interfaces.infrastructure.external.test.i_list_test_infrastructure i
 
 @inject
 class GetTestUseCase(IGetTest):
-    __api_service: ILisTestInfrastructure
+    __test_infrastructure: ILisTestInfrastructure
 
-    def __init__(self, api_service: ILisTestInfrastructure) -> None:
-        (self.__api_service) = (api_service)
+    def __init__(self, test_infrastructure: ILisTestInfrastructure) -> None:
+        (self.__test_infrastructure) = test_infrastructure
 
     async def handler(self) -> ListTestDto:
-        api_result = await self.__api_service.execute()
+        api_result = await self.__test_infrastructure.execute()
         return mapper.to(ListTestDto).map(api_result)

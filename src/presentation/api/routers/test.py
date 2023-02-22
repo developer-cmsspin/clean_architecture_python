@@ -3,6 +3,8 @@ from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from kink import di
 from domain.dto.list_test_dto import ListTestDto
+from domain.dto.test_dto import TestDto
+from domain.interfaces.application.test.i_create_test import ICreateTest
 from domain.interfaces.application.test.i_get_test import IGetTest
 
 
@@ -20,6 +22,13 @@ fake_items_db_detail = {"plumbus": {"name": "Plumbus"}}
 async def list():
     application: IGetTest = di[IGetTest]
     result = await application.handler()
+    return JSONResponse(content=jsonable_encoder(result))
+
+
+@router.post("/create")
+async def create(request: TestDto):
+    application: ICreateTest = di[ICreateTest]
+    result = await application.handler(request)
     return JSONResponse(content=jsonable_encoder(result))
 
 
