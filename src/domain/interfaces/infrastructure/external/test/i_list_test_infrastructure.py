@@ -1,7 +1,7 @@
 from abc import ABCMeta, abstractclassmethod
 
 from kink import inject
-from domain.model.list_test import ListTest
+from src.domain.model.list_test import ListTest
 
 import array as arr
 

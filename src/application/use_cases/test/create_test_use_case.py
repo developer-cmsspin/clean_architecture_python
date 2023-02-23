@@ -1,18 +1,19 @@
-from automapper import mapper
-from domain.dto.test_dto import TestDto
-from domain.interfaces.application.test.i_create_test import ICreateTest
-from domain.interfaces.infrastructure.persistence.repository.i_repository_test import IRepositoryTest
-from domain.model.test import Test
+from automapper import Mapper
+from src.domain.dto.test_dto import TestDto
+from src.domain.interfaces.application.test.i_create_test import ICreateTest
+from src.domain.interfaces.infrastructure.persistence.repository.i_repository_test import IRepositoryTest
+from src.domain.model.test import Test
 
 
 class CreateTestUseCase(ICreateTest):
 
     __repository: IRepositoryTest
+    __mapper: Mapper
 
-    def __init__(self, repository: IRepositoryTest) -> None:
-        self.__repository = repository
+    def __init__(self, repository: IRepositoryTest, mapper: Mapper) -> None:
+        (self.__repository, self.__mapper) = (repository, mapper)
 
     async def handler(self, request: TestDto) -> TestDto:
-        test_data: Test = mapper.map(request)
+        test_data: Test = self.__mapper.map(request)
         result: Test = await self.__repository.create_test(test_data)
-        return mapper.map(result)
+        return self.__mapper.map(result)

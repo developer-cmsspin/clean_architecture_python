@@ -2,10 +2,10 @@ from fastapi import APIRouter, HTTPException
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from kink import di
-from domain.dto.list_test_dto import ListTestDto
-from domain.dto.test_dto import TestDto
-from domain.interfaces.application.test.i_create_test import ICreateTest
-from domain.interfaces.application.test.i_get_test import IGetTest
+from src.domain.dto.list_test_dto import ListTestDto
+from src.domain.dto.test_dto import TestDto
+from src.domain.interfaces.application.test.i_create_test import ICreateTest
+from src.domain.interfaces.application.test.i_get_test import IGetTest
 
 
 router = APIRouter(

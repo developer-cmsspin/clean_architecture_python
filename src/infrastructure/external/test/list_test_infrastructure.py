@@ -1,7 +1,7 @@
 from typing import List
-from domain.model.list_test import ListTest
-from domain.model.test import Test
-from domain.interfaces.infrastructure.external.test.i_list_test_infrastructure import ILisTestInfrastructure
+from src.domain.model.list_test import ListTest
+from src.domain.model.test import Test
+from src.domain.interfaces.infrastructure.external.test.i_list_test_infrastructure import ILisTestInfrastructure
 
 
 class ListTestInfrastructure(ILisTestInfrastructure):

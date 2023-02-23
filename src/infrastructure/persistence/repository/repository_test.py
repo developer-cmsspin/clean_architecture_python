@@ -1,5 +1,5 @@
-from domain.interfaces.infrastructure.persistence.repository.i_repository_test import IRepositoryTest
-from domain.model.test import Test
+from src.domain.interfaces.infrastructure.persistence.repository.i_repository_test import IRepositoryTest
+from src.domain.model.test import Test
 
 
 class RepositoryTest(IRepositoryTest):

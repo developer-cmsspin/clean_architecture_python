@@ -4,9 +4,9 @@
 # https://ellibrodepython.com/abstract-base-class
 
 from kink import di
-from infrastructure.external.test.list_test_infrastructure import ListTestInfrastructure
+from src.infrastructure.external.test.list_test_infrastructure import ListTestInfrastructure
 
-from domain.interfaces.infrastructure.external.test.i_list_test_infrastructure import ILisTestInfrastructure
+from src.domain.interfaces.infrastructure.external.test.i_list_test_infrastructure import ILisTestInfrastructure
 
 
 def add_infrastructure_external() -> None:

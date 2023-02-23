@@ -1,5 +1,5 @@
 from abc import ABCMeta, abstractclassmethod
-from domain.dto.list_test_dto import ListTestDto
+from src.domain.dto.list_test_dto import ListTestDto
 
 
 class IGetTest(metaclass=ABCMeta):

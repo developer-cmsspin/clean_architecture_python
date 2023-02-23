@@ -1,9 +1,9 @@
 from kink import inject
 from automapper import mapper
-from domain.dto.test_dto import TestDto
-from domain.interfaces.application.test.i_get_test import IGetTest
-from domain.dto.list_test_dto import ListTestDto
-from domain.interfaces.infrastructure.external.test.i_list_test_infrastructure import ILisTestInfrastructure
+from src.domain.dto.test_dto import TestDto
+from src.domain.interfaces.application.test.i_get_test import IGetTest
+from src.domain.dto.list_test_dto import ListTestDto
+from src.domain.interfaces.infrastructure.external.test.i_list_test_infrastructure import ILisTestInfrastructure
 
 # conectar la persistencia
 # crear paquetes pip3

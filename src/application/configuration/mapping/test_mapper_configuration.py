@@ -1,7 +1,7 @@
 from automapper import mapper
 
-from domain.dto.test_dto import TestDto
-from domain.model.test import Test
+from src.domain.dto.test_dto import TestDto
+from src.domain.model.test import Test
 
 
 def test_mapper_config():

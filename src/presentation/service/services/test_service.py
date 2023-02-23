@@ -1,6 +1,6 @@
 from kink import inject
 
-from domain.interfaces.application.test.i_create_test import ICreateTest
+from src.domain.interfaces.application.test.i_create_test import ICreateTest
 
 
 @inject

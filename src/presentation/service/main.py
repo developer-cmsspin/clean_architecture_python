@@ -1,9 +1,9 @@
 from kink import di
-from infrastructure.external.dependency_injection import add_infrastructure_external
-from application.dependency_injection import add_application
+from src.infrastructure.external.dependency_injection import add_infrastructure_external
+from src.application.dependency_injection import add_application
 import asyncio
 
-# from presentation.common.program_console import run_console
+# from src.presentation.common.program_console import run_console
 
 add_infrastructure_external()
 add_application()

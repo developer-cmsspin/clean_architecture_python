@@ -18,8 +18,8 @@
       "type": "python",
       "request": "launch",
       "module": "uvicorn",
-      "args": ["presentation.api.main:app", "--reload"],
-      "cwd": "${workspaceFolder}/src"
+      "args": ["src.presentation.api.main:app", "--reload"],
+      "cwd": "${workspaceFolder}"
     }
   ]
 }

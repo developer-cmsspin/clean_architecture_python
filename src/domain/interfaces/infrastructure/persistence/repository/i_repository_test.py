@@ -1,6 +1,6 @@
 from abc import ABC, abstractclassmethod
 from typing import List
-from domain.model.test import Test
+from src.domain.model.test import Test
 import array as arr
 
 
